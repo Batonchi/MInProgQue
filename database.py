@@ -34,6 +34,8 @@ def create_database():
                 CREATE TABLE IF NOT EXISTS users (
                     user_id SERIAL PRIMARY KEY,
                     is_admin BOOLEAN NOT NULL DEFAULT FALSE,
+                    is_active BOOLEAN NOT NULL DEFAULT TRUE,
+                    date_registred DATE NOT NULL DEFAULT CURRENT_TIMESTAMP,
                     first_name VARCHAR(255) NOT NULL,
                     last_name VARCHAR(255) NOT NULL,
                     email text NOT NULL UNIQUE,
@@ -68,6 +70,11 @@ def create_database():
                 );
                 CREATE TABLE IF NOT EXISTS literary_sources (
                     source_id SERIAL PRIMARY KEY,
+                    content JSON NOT NULL DEFAULT '{}'
+                );
+                CREATE TABLE IF NOT EXISTS quotes (
+                    user_id INTEGER REFERENCES users(user_id),
+                    page_id INTEGER REFERENCES pages(page_id),
                     content JSON NOT NULL DEFAULT '{}'
                 );
             ''')

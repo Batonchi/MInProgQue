@@ -1,0 +1,174 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(82, 161, 157, 0.549);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+section {
+    background-color: rgba(74, 97, 96, 1);
+    width: 720px;
+    height: 880px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.exit-btn {
+    position: relative;
+    left: 345px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.header_of_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    font-family: inherit;
+    position: relative;
+    bottom: 65px;
+}
+
+h2 {
+    color: rgba(54, 50, 48, 0.5);
+    font-size: 80px;
+    font-weight: 900;
+    font-family: inherit;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+}
+
+.input_div {
+    padding-left: 20px;
+    width: 610px;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    border: solid 5px rgba(139, 102, 83, 0.5);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+form button {
+    background-color: rgba(139, 102, 83, 0.5);
+    width: 610px;
+    height: 55px;
+    border-radius: 10px;
+    border: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: white;
+    color: rgba(139, 102, 83, 0.5);
+}
+
+input {
+    border: none;
+    padding-left: 20px;
+    font-family: inherit;
+    font-size: 18px;
+    height: 48px;
+    flex-grow: 1;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+label {
+    width: max-content;
+    font-size: 20px;
+    font-family: inherit;
+    font-weight: 700;
+    color: white;
+}
+
+#reg {
+    width: 720px;
+    height: 95px;
+    background-color: rgba(82, 161, 157, 1);
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border: none;
+    position: relative;
+    top: 56px;
+    cursor: pointer;
+}
+
+#reg:hover {
+    background-color: rgba(82, 161, 157, 0.5);
+}
+
+.check-box {
+    position: relative;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 610px;
+}
+
+.check-box label {
+    color: rgba(255, 255, 255, 0.525);
+    font-size: 16px;
+    font-weight: 900;
+    font-family: inherit;
+}
+
+input[type="checkbox"] {
+    height: 25px;
+    accent-color: rgba(139, 102, 83, 0.5);
+}

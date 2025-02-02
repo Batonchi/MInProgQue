@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Дунаев Глеб">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вы забанены</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background"></div>
+    <section>
+        <div class="header_block">
+            <h1>ДА, ЭТО БАН...</h1>
+            <h2>MINPROGQUE</h2>
+        </div>
+        <div class="main_block">
+            <div class="flex_column_p">
+                <p>К сожалеию, пользователь, <mark>{{user}}</mark> c id <mark>{{user_id]}}</mark> вы забанены за <mark>{{reason}}</mark>. Блокировка строго основывается на праилах сайта</p>
+                <p>Вы всегда можете подать жалобу или подать заявку об изменении решения</p>
+                <p>С уважением администрация MInprogque</p>
+            </div>
+            <div class="flex_column-btns">
+                <button>правила сайта</button>
+                <button>поддержка</button>
+                <button>главная</button>
+            </div>
+        </div>
+        <p class="admin_id">ADMIN ID: {{admin_id}}</p>
+    </section>
+    <link rel="stylesheet" href="/css/ban.css">
+</body>
+</html>

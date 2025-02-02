@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(74, 97, 96, 1);
+    zoom: 90%;
+}
+
+section {
+    margin-top: 150px;
+    width: 1090px;
+    height: 650px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    background-color: white;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.background {
+    background-image: url('/images/ban/back.svg');
+    width: 1980px;
+    height: 1020px;
+    background-repeat: no-repeat;
+}
+
+.main_block {
+    display: flex;
+}
+
+.header_block {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    bottom: 79px;
+}
+
+h1 {
+    color: white;
+    font-family: inherit;
+    font-size: 32px;
+    font-weight: 900;
+}
+
+h2 {
+    color: rgba(224, 115, 58, 1);
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+p {
+    width: 600px;
+}
+
+.admin_id {
+    position: relative;
+    bottom: 30px;
+    color: rgba(82, 161, 157, 0.5);
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+}
+
+.flex_column-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 300px;
+}
+
+.flex_column-btns button {
+    position: relative;
+    bottom: 65px;
+    right: 110px;
+    background-color: rgba(82, 161, 157, 0.5);
+    cursor: pointer;
+    color: white;
+    font-family: inherit;
+    font-size: 24px;
+    font-weight: 900;
+    width: 290px;
+    height: 200px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: none;
+}
+
+.flex_column-btns button:hover {
+    background-color: rgba(74, 97, 96, 0.408);
+}
+
+mark {
+    background: none;
+    color: rgba(118, 85, 68, 1);
+}
+
+p {
+    font-size: 36px;
+    color: rgba(224, 115, 58, 1);
+    padding-bottom: 30px;
+}
+
+.flex_column_p {
+    position: relative;
+    bottom: 30px;
+}

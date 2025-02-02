@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(74, 97, 96, 1);
+}
+
+.background_flame {
+    background-image: url('/images/error/flame_back.svg');
+    width: 1185px;
+    background-repeat: no-repeat;
+    height: 1030px;
+}
+
+.place_inf {
+    background-image: url('/images/error/erro_inf.svg');
+    background-repeat: no-repeat;
+    width: 1010px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom_exit-btn {
+    cursor: pointer;
+    background-image: url('/images/error/exit-btn.svg');
+    background-repeat: no-repeat;
+    width: 194px;
+    height: 400px;
+    position: relative;
+    top: 400px;
+    color: rgba(255, 233, 221, 0.68);
+    font-family: inherit;
+    font-size: 24px;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom_exit-btn:hover {
+    color: rgba(139, 102, 83, 1);
+}
+
+.error_widget {
+    height: 400px;
+    position: absolute;
+}
+
+.header {
+    width: 875px;
+    position: absolute;
+    top: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    font-family: inherit;
+    font-size: 64px;
+    font-weight: 900;
+    color: rgba(224, 115, 58, 0.8);
+}
+
+h3 {
+    position: relative;
+    left: 50px;
+    bottom: 10px;
+    font-family: inherit;
+    font-size: 32px;
+    font-weight: 900;
+    color: rgba(82, 161, 157, 0.5);
+}
+
+.header p {
+    position: relative;
+    top: 15px;
+    right: 50px;
+    font-weight: 900;
+    color: white;
+    font-size: 24px;
+}
+
+.message {
+    position: relative;
+    left: 50px;
+    bottom: 10px;
+    font-size: 20px;
+    color: rgba(74, 97, 96, 1);
+}
+
+.addition_text {
+    position: relative;
+    left: 50px;
+    bottom: 10px;
+    font-size: 20px;
+    color: rgba(82, 161, 157, 1);
+    width: 300px;
+    text-align: center;
+}
+

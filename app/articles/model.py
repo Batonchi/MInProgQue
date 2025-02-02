@@ -33,9 +33,10 @@ class Text:
 
 
 class Feedback:
-    def __init__(self, user_id: int, page_id: int, feedback_id: int = None):
+    def __init__(self, user_id: int, page_id: int, content: json, feedback_id: int = None):
         self.user_id = user_id
         self.page_id = page_id
+        self.content = content
         if feedback_id:
             self.feedback_id = feedback_id
 
