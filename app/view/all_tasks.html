@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задачи</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/all_tasks.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+</head>
+<body>
+    {% block selector%}
+        <section class="selector_task" style="visibility: hidden; position: absolute; z-index: 1">
+            <div class="header_selector">
+                <div class="text_of_header">
+                    <h1>MINPROGQUE</h1>
+                    <h2>ЗАДАЧИ</h2>
+                </div>
+                <div id="exit"></div>
+            </div>
+            <div class="search_task">
+                <button for="search"></button>
+                <input id="search" placeholder="введите название или группу задачи, возможно кусок описания">
+            </div>
+            <div class="scroll_container">
+                <div class="group_task__dropdown_custom_block">
+<!--                    do id for hidden func-->
+                    <div id="name_group">
+                        <h3 class="group_name">HUII</h3>
+                        <div class="scroll-elem">
+                            <p class="name">TITLE</p>
+                            <p class="description">DESCRIPTION</p>
+                            <p class="date_of_published">date</p>
+                        </div>
+                        <div class="scroll-elem">
+                            <p class="name">TITLE</p>
+                            <p class="description">DESCRIPTION</p>
+                            <p class="date_of_published">date</p>
+                        </div>
+                        <div class="scroll-elem">
+                            <p class="name">TITLE</p>
+                            <p class="description">DESCRIPTION</p>
+                            <p class="date_of_published">date</p>
+                        </div>
+                        <div class="scroll-elem">
+                            <p class="name">TITLE</p>
+                            <p class="description">DESCRIPTION</p>
+                            <p class="date_of_published">date</p>
+                        </div><div class="scroll-elem">
+                            <p class="name">TITLE</p>
+                            <p class="description">DESCRIPTION</p>
+                            <p class="date_of_published">date</p>
+                        </div><div class="scroll-elem">
+                            <p class="name">TITLE</p>
+                            <p class="description">DESCRIPTION</p>
+                            <p class="date_of_published">date</p>
+                        </div><div class="scroll-elem">
+                            <p class="name">TITLE</p>
+                            <p class="description">DESCRIPTION</p>
+                            <p class="date_of_published">date</p>
+                        </div><div class="scroll-elem">
+                            <p class="name">TITLE</p>
+                            <p class="description">DESCRIPTION</p>
+                            <p class="date_of_published">date</p>
+                        </div><div class="scroll-elem">
+                            <p class="name">TITLE</p>
+                            <p class="description">DESCRIPTION</p>
+                            <p class="date_of_published">date</p>
+                        </div><div class="scroll-elem">
+                            <p class="name">TITLE</p>
+                            <p class="description">DESCRIPTION</p>
+                            <p class="date_of_published">date</p>
+                        </div>
+                    </div>
+                    <div id="nammemem">
+                        <h3 class="group_name">HUII</h3>
+                        <div class="scroll-elem">
+                            <p class="name">TITLE</p>
+                            <p class="description">DESCRIPTION</p>
+                            <p class="date_of_published">date</p>
+                        </div>
+                        <div class="scroll-elem">
+                            <p class="name">TITLE</p>
+                            <p class="description">DESCRIPTION</p>
+                            <p class="date_of_published">date</p>
+                        </div>
+                        <div class="scroll-elem">
+                            <p class="name">TITLE</p>
+                            <p class="description">DESCRIPTION</p>
+                            <p class="date_of_published">date</p>
+                        </div>
+                        <div class="scroll-elem">
+                            <p class="name">TITLE</p>
+                            <p class="description">DESCRIPTION</p>
+                            <p class="date_of_published">date</p>
+                        </div><div class="scroll-elem">
+                            <p class="name">TITLE</p>
+                            <p class="description">DESCRIPTION</p>
+                            <p class="date_of_published">date</p>
+                        </div><div class="scroll-elem">
+                            <p class="name">TITLE</p>
+                            <p class="description">DESCRIPTION</p>
+                            <p class="date_of_published">date</p>
+                        </div><div class="scroll-elem">
+                            <p class="name">TITLE</p>
+                            <p class="description">DESCRIPTION</p>
+                            <p class="date_of_published">date</p>
+                        </div><div class="scroll-elem">
+                            <p class="name">TITLE</p>
+                            <p class="description">DESCRIPTION</p>
+                            <p class="date_of_published">date</p>
+                        </div><div class="scroll-elem">
+                            <p class="name">TITLE</p>
+                            <p class="description">DESCRIPTION</p>
+                            <p class="date_of_published">date</p>
+                        </div><div class="scroll-elem">
+                            <p class="name">TITLE</p>
+                            <p class="description">DESCRIPTION</p>
+                            <p class="date_of_published">date</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+    {% endblock selector%}
+    <section id="first_vis">
+        <header>
+            <div class="menubar" id="open_selector_of_task"></div>
+            <a>любимое</a>
+            <h1>MINPROGQUE</h1>
+            <a>поддержка</a>
+            <a href="">профиль</a>
+        </header>
+        <div class="second_flex_elem">
+            <section class="left_fixed_container" id="groups_of_tasks"></section>
+            <section class="right_container__view">
+                <section class="view_container">
+                    <div id="like" title="no-active" style="background-image: url('/static/images/tasks/no-active_heart.svg'); width: 45px; height: 45px; background-repeat: no-repeat; cursor: pointer; position: relative; top: 20px; left: 20px;"></div>
+                </section>
+                {% extends 'footer.html' %}
+            </section>
+        </div>
+        {% block scripts%}
+        <script src="/static/js/open_selector.js"></script>
+        <script src="/static/js/like_article.js"></script>
+        {% endblock scripts%}
+    </section>
+    </body>
+
+</html>

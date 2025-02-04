@@ -1,5 +1,5 @@
 from database import get_connection
-from app.articles.model import *
+from app.pages.model import *
 
 
 class PageService:
@@ -8,7 +8,7 @@ class PageService:
     def save(page: Page):
         with get_connection() as conn:
             conn.cursor().execute('''
-                INSERT INTO articles (title, author, description, url, published_at, content) 
+                INSERT INTO pages (title, author, description, url, published_at, content) 
                 VALUES (%s, %s, %s, %s, %s, %s)''',
                                   (page.title, page.author, page.description,
                                    page.url, page.published_at, page.content))
@@ -22,7 +22,7 @@ class PageService:
     def get_article_by_id(article_id: int):
         with get_connection() as conn:
             cur = conn.cursor()
-            result = cur.execute('''SELECT * FROM articles WHERE page_id = %S''', (article_id,))
+            result = cur.execute('''SELECT * FROM pages WHERE page_id = %S''', (article_id,))
             row = result.fetchone()
             if row:
                 return Page(row[1], row[2], row[3], row[4], row[5], row[0])
