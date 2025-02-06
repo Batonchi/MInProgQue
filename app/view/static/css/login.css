@@ -175,3 +175,19 @@ button {
 .log_with_token:hover {
     background-color: #52a19da3;
 }
+
+.return_to_norm {
+    cursor: pointer;
+    position: relative;
+    top: 70px;
+    width: 720px;
+    min-height: 60px;
+    background-color: #52a19d81;
+    color: #4A6160;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.return_to_norm:hover {
+    background-color: #52a19da3;
+}

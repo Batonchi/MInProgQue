@@ -1,7 +1,9 @@
 from fastapi import FastAPI, Request, Response, HTTPException
+from pip._internal.network import auth
 from starlette.templating import Jinja2Templates
 from starlette.staticfiles import StaticFiles
 from database import create_database, rcache
+from app.auth.router import router as auth_router
 
 
 create_database()
@@ -10,7 +12,7 @@ create_database()
 app = FastAPI()
 templates = Jinja2Templates(directory="app/view")
 
-
+app.include_router(auth_router)
 app.mount('/static', StaticFiles(directory='app/view/static'))
 # включение роутеров
 
@@ -33,5 +35,5 @@ async def main_page(request: Request):
 
 @app.get("/home")
 async def home(request: Request):
-    return templates.TemplateResponse("all_tasks.html", {"request": request})
+    return templates.TemplateResponse("sources.html", {"request": request})
 

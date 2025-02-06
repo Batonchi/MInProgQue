@@ -13,9 +13,9 @@
 </head>
 <body>
     <section>
-        <button style="background: none; background-image: url('/images/registration/exit-btn.svg'); width: 30px; height: 30px; border: none; background-repeat: no-repeat;" class="exit-btn"></button>
+        <button onclick="window.location.href='/login'" style="background: none; background-image: url('/static//images/registration/exit-btn.svg'); width: 30px; height: 30px; border: none; background-repeat: no-repeat;" class="exit-btn"></button>
         <div class="form_block">
-            <div class="header_of_block">
+            <div class="header_of_block" onclick="window.location.href='/'">
                 <h2>MINPROGQUE</h2>
                 <h1>РЕГИСТРАЦИЯ</h1>
             </div>
@@ -51,10 +51,10 @@
                 </div>
             </form>
             <button form="registration" id="reg">
-                <img src="/images/registration/arrow.svg" alt="">
+                <img src="/static/images/registration/arrow.svg" alt="">
             </button>
         </div>
     </section>
-    <link rel="stylesheet" href="/css/registartion.css">
+    <link rel="stylesheet" href="/static//css/registartion.css">
 </body>
 </html>

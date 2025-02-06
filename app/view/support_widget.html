@@ -6,8 +6,57 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Поддержка</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    <section class="main_view_block">
+        <div class="background"></div>
+        <div class="flex-first-elem_flex-column_div">
+            <h1>MinProgQue</h1>
+            <h2>Нашли ошибку?<br>
+Предложения?<br>
+Жалобы?<br>
+Пишите попытаемся помочь.</h2>
+            <h3>Наша поддержка попытаетсься помочь вам решить ваш вопрос</h3>
+        </div>
+        <div class="flex-second-elem_flex-column_div">
+            <select id="category">
+                <option style="display: none">ТЕМА</option>
+                <optgroup label="Выберите тему обращения">
+                    <option value="">предложения и жалобы</option>
+                    <option value="">востановление аккаунта</option>
+                    <option value="">ошибки в тексте</option>
+                    <option value="">сбой работы сайта</option>
+                    <option value="">блокировка аккаунта</option>
+                    <option value="">иная причина</option>
+                </optgroup>
+            </select>
+            <textarea id="problem_text" placeholder="Опишите  свою проблему"></textarea>
+            <button id="send_request">отправить запрос</button>
+        </div>
+    </section>
+    <div class="navigate_buttons">
+        <button id="home" style="background-repeat: no-repeat; background-image: url('/static/images/support/home-icon.svg'); width: 50px; height: 40px;"></button>
+        <button id="exit" style="background-repeat: no-repeat; background-image: url('/static/images/support/exit-btn.svg'); width: 40px; height: 40px;"></button>
+    </div>
+    <link href="/static/css/support.css" rel="stylesheet">
+    <script>
+        const home = document.getElementById('home')
+        const exit = document.getElementById('exit')
+        home.addEventListener('mouseover', (event) => {
+            home.style.backgroundImage = 'url("/static/images/support/home_hover.svg")'
+        })
+        exit.addEventListener('mouseover', (event) => {
+            exit.style.backgroundImage = 'url("/static/images/support/exit_hover.svg")'
+        })
+        home.addEventListener('mouseout', (event) => {
+            home.style.backgroundImage = 'url("/static/images/support/home-icon.svg")'
+        })
+        exit.addEventListener('mouseout', (event) => {
+            exit.style.backgroundImage = 'url("/static/images/support/exit-btn.svg")'
+        })
+    </script>
 </body>
 </html>

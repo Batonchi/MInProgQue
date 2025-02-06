@@ -16,7 +16,7 @@
 
 <body>
     <section>
-        <div class="header_of_block">
+        <div class="header_of_block" onclick="window.location.href='/'">
             <h2>MINPROGQUE</h2>
             <h1>ВХОД</h1>
         </div>
@@ -29,12 +29,12 @@
             <a href="">востановление аккаунта</a>
         </div>
         <div class="flex-btns">
-            <button class="reg-btn">РЕГИСТРАЦИЯ</button>
+            <button class="reg-btn" onclick="window.location.href='/registration'">РЕГИСТРАЦИЯ</button>
             <button id="login">ВХОД</button>
         </div>
-        <button class="log_with_token">ВОЙТИ С ТОКЕНОМ</button>
+        <button class="log_with_token" onclick="window.location.href='/login/token'">ВОЙТИ С ТОКЕНОМ</button>
     </section>
-    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/static/css/login.css">
 </body>
 
 </html>

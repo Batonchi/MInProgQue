@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="/static/css/footer.css">
 </head>
 <body>
-    {% block selector%}
         <section class="selector_task" style="visibility: hidden; position: absolute; z-index: 1">
             <div class="header_selector">
                 <div class="text_of_header">
@@ -125,8 +124,8 @@
                 </div>
             </div>
         </section>
-    {% endblock selector%}
     <section id="first_vis">
+        {% block header %}{% endblock header %}
         <header>
             <div class="menubar" id="open_selector_of_task"></div>
             <a>любимое</a>
@@ -134,13 +133,14 @@
             <a>поддержка</a>
             <a href="">профиль</a>
         </header>
+        {% block header_style %}{% endblock header_style %}
         <div class="second_flex_elem">
             <section class="left_fixed_container" id="groups_of_tasks"></section>
             <section class="right_container__view">
                 <section class="view_container">
                     <div id="like" title="no-active" style="background-image: url('/static/images/tasks/no-active_heart.svg'); width: 45px; height: 45px; background-repeat: no-repeat; cursor: pointer; position: relative; top: 20px; left: 20px;"></div>
                 </section>
-                {% extends 'footer.html' %}
+                {% extends 'footer_header.html' %}
             </section>
         </div>
         {% block scripts%}
@@ -149,5 +149,6 @@
         {% endblock scripts%}
     </section>
     </body>
-
+{% block another %}{% endblock another %}
+{% block another_style %}{% endblock another_style %}
 </html>

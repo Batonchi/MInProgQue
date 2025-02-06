@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/static/css/footer.css">
 </head>
 <body>
+    {% block header %}{% endblock header %}
     <header>
         <div class="background" style="background-image: url('/static/images/main/main_back.svg'); width: 1307px; height: 808px;"></div>
         <div class="flex-inf">
@@ -112,6 +113,9 @@
             <button>ВОЙТИ</button>
         </div>
     </section>
-    {% extends 'footer.html' %}
+    {% extends 'footer_header.html' %}
+    {% block header_style %}{% endblock header_style %}
+    {% block another %}{% endblock another %}
+    {% block another_style %}{% endblock another_style %}
 </body>
 </html>

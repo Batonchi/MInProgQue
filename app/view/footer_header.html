@@ -1,10 +1,30 @@
+    {% block header %}
+    <header>
+        <div id="func_btn"></div>
+        <div class="flex-column_text">
+            <p class="back_text">{% block back_text %}{% endblock back_text%}</p>
+            <h1 onclick="window.location.href=`\\`">MINPROGQUE</h1>
+        </div>
+    </header>
+    {% endblock header %}
+    {% block another%}
+    <section class="another">
+         <div class="flex_text">
+                <p class="introducing">ВСТУПЛЕНИЕ</p>
+                <p class="first-preference">{% block content_1 %}{% endblock content_1 %}</p>
+                <p class="second-preference">{% block content_2 %}{% endblock content_2 %}</p>
+         </div>
+        {% block sources %}{% endblock sources %}
+        {% block embed %}{% endblock embed %}
+    </section>
+    {% endblock another%}
     {% block footer %}
     <footer>
         <div class="flex-a">
             <a href="" class="foot-link">поддержка</a>
             <a href="" class="foot-link">контакты</a>
             <h3>MINPROGQUE</h3>
-            <a href="" class="foot-link">правила</a>
+            {% block third_link %}<a href="" class="foot-link">правила</a>{% endblock third_link %}
             <a href="" class="foot-link">ресурсы</a>
         </div>
     </footer>
@@ -60,4 +80,12 @@
         </div>
     </section>
     {% endblock feedback %}
-    {%block scripts%}{% endblock scripts%}
+    {%block styles_footer %}
+    <link rel="stylesheet" href="/static/css/footer.css">
+    {% endblock styles_footer%}
+    {% block header_style %}
+    <link rel="stylesheet" href="/static/css/header.css">
+    {% endblock header_style %}
+    {% block another_style %}
+    <link rel="stylesheet" href="/static/css/another.css">
+    {% endblock another_style %}

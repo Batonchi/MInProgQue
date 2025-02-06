@@ -41,6 +41,14 @@ header .flex-inf {
     font-family: inherit;
 }
 
+button {
+    transition: background-color 2s, color 1s;
+}
+
+p {
+    transition: color 3s;
+}
+
 .header-btn {
     width: max-content;
     height: max-content;
