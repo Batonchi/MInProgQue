@@ -21,9 +21,10 @@ class UserCreate(UserBase):
 
 class UserRead(UserCreate):
     
-    def __init__(self, first_name: str, last_name: str, avatar: str, email: str, password: str, special_word: str, user_id: int):
+    def __init__(self, first_name: str, last_name: str, avatar: str, email: str, password: str, special_word: str, user_id: int, is_admin: bool):
          super().__init__(first_name, last_name, avatar, email, password, special_word)
          self.user_id = user_id
+         self.is_admin = is_admin
 
 
 
