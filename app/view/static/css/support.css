@@ -145,6 +145,7 @@ select:focus-visible {
 }
 
 #send_request {
+    cursor: pointer;
     height: 40px;
     background-color: #A3CAC8;
     color: #4A6160;

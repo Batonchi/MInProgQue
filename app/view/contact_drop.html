@@ -15,20 +15,26 @@
 </head>
 <body>
     <section class="main_view">
+        <div class="header" onclick="window.location.href='/'">
+            <h1>КОНТАКТЫ</h1>
+            <h2>MINPROGQUE</h2>
+        </div>
         <div id="number">
             <p>ТЕЛЕФОН</p>
             <div class="content">{{number_of_phone}}</div>
         </div>
         <div id="email">
             <p>ПОЧТА</p>
-            <div class="content">{{email_adress}}</div>
+            <div class="content">{{email_address}}</div>
         </div>
         <div class="flex_elems">
             <div class="tg">
                 <img src="" alt="">
                 <p><a href="">@{{tg_name}}</a></p>
             </div>
+            <div id="exit"></div>
         </div>
     </section>
+    <link href="/static/css/contact_drop.css" rel="stylesheet">
 </body>
 </html>

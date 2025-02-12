@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    background-color: #4A6160;
+    color: white;
+}
+
+.main_view {
+    position: relative;
+    top: 30vh;
+    left: 45vw;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #4F8E8B;
+    font-size: 64px;
+    font-weight: inherit;
+    font-family: inherit;
+}
+
+h2 {
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: inherit;
+    position: relative;
+    bottom: 60px;
+}
+
+.main_view {
+    width: 410px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.main_view p {
+    width: 410px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.main_view div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#exit {
+    cursor: pointer;
+    background: url("/static/images/icons/exit-btn.png") no-repeat;
+    width: 24px;
+    height: 24px;
+}
+
+#exit:hover {
+    background: url("/static/images/icons/exit-btn_hover.svg") no-repeat;
+}
+
+.tg a {
+    text-decoration: none;
+    color: white;
+}
+

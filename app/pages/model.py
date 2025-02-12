@@ -1,9 +1,11 @@
 import json
 
+from datetime import date
+
 
 class Page:
 
-    def __init__(self, title: str, author: int, description: str, url: str, published_at: str, content: json,
+    def __init__(self, title: str, author: int, description: str, url: str, published_at: date, content: json,
                  page_id: int = None):
         self.title = title
         self.author = author

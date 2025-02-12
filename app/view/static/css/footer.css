@@ -190,9 +190,7 @@ textarea::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: center;
     font-weight: 900;
-    position: relative;
-    bottom: 5px;
-    padding-top: 5px;
+    transition: background-color 3s, color 1s;
 }
 
 #send:hover {

@@ -19,15 +19,15 @@
         <div class="background" style="background-image: url('/static/images/main/main_back.svg'); width: 1307px; height: 808px;"></div>
         <div class="flex-inf">
             <nav>
-                <button class="header-btn">КОНТАКТЫ</button>
-                <button class="header-btn">ВОЙТИ</button>
+                <button class="header-btn" onclick="window.location.href='/contact'">КОНТАКТЫ</button>
+                <button class="header-btn" onclick="window.location.href='/login'">ВОЙТИ</button>
                 <h3>MINPROGQUE</h3>
-                <button class="header-btn">ЗАДАЧИ</button>
-                <button class="header-btn">ПРАВИЛА САЙТА</button>
+                <button class="header-btn" onclick="window.location.href='/pages'">ЗАДАЧИ</button>
+                <button class="header-btn" onclick="window.location.href='/rules'">ПРАВИЛА САЙТА</button>
             </nav>
             <div class="introducing">
                 <h1>MINIMAL <mark class="m-1">PROGRAMM</mark> QUERY</h1>
-                <button id="start_learn" class="'start-btn">НАЧАТЬ ИЗУЧЕНИЕ</button>
+                <button id="start_learn" class="'start-btn" onclick="window.location.href='/pages'">НАЧАТЬ ИЗУЧЕНИЕ</button>
                 <p class="header__intro_text">САЙТ, КОТОРЫЙ ПОМОЖЕТ ПРОДТЯНУТЬ СВОЕ ПОНИМАНИЕ В ПРОГРАММИРОВАНИИ</p>
             </div>
         </div>
@@ -104,13 +104,13 @@
             <p class="first-preference">СПАСИБО, ЧТО ДОШЛИ ДО КОНЦА ПЕРВОЙ СТРАНИЦЫ</p>
             <p class="first-preference">НАДЕЕМСЯ, ЧТО ЭТОТ САЙТ ПРИДЕТЬСЯ ВАМ ПО ДУШЕ</p>
             <p class="second-preference">перед использованием сайта рекомендуется пройти регистрацию и прочитать инструкцию по эксплутации</p>
-            <div class="custom-btn__toUp" onclick="window.scrollTo(0, 0)">
+            <div class="custom-btn__toUp" onclick="body.scrollIntoView({behavior: 'smooth', block: 'start'})">
                 <p>ПОДНЯТЬСЯ НАВЕРХ</p>
             </div>
         </div>
         <div class="log_and_reg-btn">
-            <button>ЗАРЕГИСТРИРОВАТЬСЯ</button>
-            <button>ВОЙТИ</button>
+            <button onclick="window.location.href='/registration'">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+            <button onclick="window.location.href='/login'">ВОЙТИ</button>
         </div>
     </section>
     {% extends 'footer_header.html' %}

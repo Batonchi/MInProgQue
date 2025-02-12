@@ -21,11 +21,11 @@
     {% block footer %}
     <footer>
         <div class="flex-a">
-            <a href="" class="foot-link">поддержка</a>
-            <a href="" class="foot-link">контакты</a>
-            <h3>MINPROGQUE</h3>
-            {% block third_link %}<a href="" class="foot-link">правила</a>{% endblock third_link %}
-            <a href="" class="foot-link">ресурсы</a>
+            <a href="/support" class="foot-link">поддержка</a>
+            <a href="/contact" class="foot-link">контакты</a>
+            <h3 onclick="window.location.href='/'">MINPROGQUE</h3>
+            {% block third_link %}<a href="/rules" class="foot-link">правила</a>{% endblock third_link %}
+            <a href="/sources" class="foot-link">ресурсы</a>
         </div>
     </footer>
     {% endblock footer %}
@@ -89,3 +89,4 @@
     {% block another_style %}
     <link rel="stylesheet" href="/static/css/another.css">
     {% endblock another_style %}
+    {% block scripts%}{% endblock scripts%}
