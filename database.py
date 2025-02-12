@@ -41,7 +41,7 @@ def create_database():
                     email text NOT NULL UNIQUE,
                     password text NOT NULL,
                     special_word VARCHAR(40) NOT NULL DEFAULT '',
-                    avatar INT REFERENCES images(image_id),
+                    avatar text,
                     favorites JSON NOT NULL DEFAULT '{}'
                 );
                 CREATE TABLE IF NOT EXISTS pages (

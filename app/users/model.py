@@ -4,22 +4,30 @@ import json
 from datetime import date
 
 
-class User:
+class UserBase:
 
-    def __init__(self, is_admin: bool, is_active: bool, date_reg: date, first_name: str, last_name: str, email: str,
-                 password: str, special_word: str, avatar: str, favorites: json = None, user_id: int = None):
-        self.is_admin = is_admin
-        self.is_active = is_active
-        self.date_reg = date_reg
+    def __init__(self, first_name: str, last_name: str, avatar: str):
         self.first_name = first_name
         self.last_name = last_name
-        self.email = email
-        self.password = password
-        self.special_word = special_word
         self.avatar = avatar
-        self.favorites = favorites
-        if user_id:
-            self.user_id = user_id
+
+class UserCreate(UserBase):
+
+        def __init__(self, first_name: str, last_name: str, avatar: str, email: str, password: str, special_word: str):
+            super().__init__(first_name, last_name, avatar)
+            self.email = email
+            self.password = password
+            self.special_word = special_word
+
+class UserRead(UserCreate):
+    
+    def __init__(self, first_name: str, last_name: str, avatar: str, email: str, password: str, special_word: str, user_id: int):
+         super().__init__(first_name, last_name, avatar, email, password, special_word)
+         self.user_id = user_id
+
+
+
+
 
 
 class Favorite:
