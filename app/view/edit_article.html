@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Редактирование статьи</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="main_view__scroll">
+        <h1></h1>
+        <div class="div-flex_row">
+            <div class="div-flex_column">
+                <label for="title"></label>
+                <input id="title">
+                <label for="groups_of_articles"></label>
+                <select id="groups_of_articles"></select>
+                <input id="other_group" style="display: none">
+                <button id="publish"></button>
+            </div>
+            <div class="div-flex_column">
+                <label for="description"></label>
+                <textarea id="description"></textarea>
+            </div>
+        </div>
+        <div class="div-flex_column">
+            <h2></h2>
+            <div id="input_article_info">
+                <button>+</button>
+            </div>
+        </div>
+    </section>
+    <link rel="stylesheet" href="/static/css/edit_article.css">
+</body>
+</html>

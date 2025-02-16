@@ -27,6 +27,7 @@ async def login_page(request: Request):
 async def logout(request: Request):
     pass
 
+
 @router.post('/login')
 async def login(response: Response, email: str, password: str):
     user = UserService.find_by_email_and_password(email, hash_password(password))
@@ -49,6 +50,7 @@ async def registration(first_name: str, last_name: str, email: str, password: st
         print(ex)
         raise HTTPException(status_code=409)
 
+
 @router.get('/registration')
 async def register_page(request: Request):
     return templates.TemplateResponse('registration.html', {'request': request})
@@ -61,4 +63,5 @@ async def login_with_token(request: Request):
 
 @router.get('/successfully')
 async def successful_page(request: Request):
-    return templates.TemplateResponse('successful.html', {'request': request})
+    return templates.TemplateResponse('add_special_word.html', {'request': request})
+

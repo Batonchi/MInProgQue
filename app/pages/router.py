@@ -1,8 +1,8 @@
 from fastapi import Request, APIRouter, HTTPException
 from jinja2 import Template
 from starlette.templating import Jinja2Templates
-
 from app.pages.service import PageService
+from app.auth.service import get_admin_by_token
 
 
 router = APIRouter(

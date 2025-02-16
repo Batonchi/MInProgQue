@@ -13,14 +13,14 @@ body {
 }
 
 .background_flame {
-    background-image: url('/images/error/flame_back.svg');
+    background-image: url('/static/images/error/flame_back.svg');
     width: 1185px;
     background-repeat: no-repeat;
     height: 1030px;
 }
 
 .place_inf {
-    background-image: url('/images/error/erro_inf.svg');
+    background-image: url('/static/images/error/erro_inf.svg');
     background-repeat: no-repeat;
     width: 1010px;
     height: 400px;
@@ -32,7 +32,7 @@ body {
 
 .custom_exit-btn {
     cursor: pointer;
-    background-image: url('/images/error/exit-btn.svg');
+    background-image: url('/static/images/error/exit-btn.svg');
     background-repeat: no-repeat;
     width: 194px;
     height: 400px;

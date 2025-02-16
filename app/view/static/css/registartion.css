@@ -12,6 +12,7 @@ body {
     align-items: center;
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
+    padding-top: 50px;
 }
 
 section {
@@ -23,6 +24,7 @@ section {
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
+    padding-top: 30px;
 }
 
 .exit-btn {
@@ -144,8 +146,9 @@ label {
     border-bottom-left-radius: 30px;
     border: none;
     position: relative;
-    top: 56px;
+    top: 65px;
     cursor: pointer;
+    transition: background-color 3s;
 }
 
 #reg:hover {
@@ -171,4 +174,12 @@ label {
 input[type="checkbox"] {
     height: 25px;
     accent-color: rgba(139, 102, 83, 0.5);
+}
+
+#view_add {
+    position: absolute;
+    top: 0;
+    display: none;
+    visibility: hidden;
+    height: 700px;
 }
