@@ -2,38 +2,38 @@ import json
 
 
 from datetime import date
+from sqlalchemy import Column, Integer, String, Boolean, Date, Text, JSON, ForeignKey
+from base.database import Base
+from sqlalchemy.orm import relationship
 
 
-class UserBase:
+class User(Base):
+    __tablename__ = 'users'
 
-    def __init__(self, first_name: str, last_name: str, avatar: str):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.avatar = avatar
+    user_id = Column(Integer, primary_key=True, autoincrement=True)
+    is_admin = Column(Boolean, nullable=True, default=False)
+    is_active = Column(Boolean, nullable=True, default=False)
+    date_reg = Column(Date, nullable=False, default='CURRENT_TIMESTAMP')
+    first_name = Column(String(255), nullable=False)
+    last_name = Column(String(255), nullable=False)
+    email = Column(Text, nullable=False, unique=True)
+    password = Column(Text, nullable=False)
+    special_word = Column(String(40), nullable=False, default='')
+    avatar = Column(Text)
+    favorites = Column(JSON, nullable=False, default='{}')
 
-class UserCreate(UserBase):
+    pages = relationship("Page", back_populates="author")
+    feedbacks = relationship("Feedback", back_populates="user")
+    supportings = relationship("Supporting", back_populates="user")
+    favorites_rel = relationship("Favorite", back_populates="user")
 
-        def __init__(self, first_name: str, last_name: str, avatar: str, email: str, password: str, special_word: str):
-            super().__init__(first_name, last_name, avatar)
-            self.email = email
-            self.password = password
-            self.special_word = special_word
 
-class UserRead(UserCreate):
+class Favorite(Base):
+    __tablename__ = 'favorite'
     
-    def __init__(self, first_name: str, last_name: str, avatar: str, email: str, password: str, special_word: str, user_id: int, is_admin: bool):
-         super().__init__(first_name, last_name, avatar, email, password, special_word)
-         self.user_id = user_id
-         self.is_admin = is_admin
+    user_id = Column(Integer, ForeignKey('users.user_id'), primary_key=True)
+    page_id = Column(Integer, ForeignKey('pages.page_id'), primary_key=True)
+    content = Column(JSON, nullable=False, default='{}')
 
-
-
-
-
-
-class Favorite:
-
-    def __init__(self, user_id: int, page_id: int, content: json):
-        self.user_id = user_id
-        self.page_id = page_id
-        self.content = content
+    user = relationship("User", back_populates="favorites_rel")
+    page = relationship("Page", back_populates="favorites_rel")

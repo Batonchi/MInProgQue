@@ -1,13 +1,15 @@
-import json
-
 from datetime import date
+from sqlalchemy import Column, Integer, String, Boolean, Date, Text, ForeignKey, JSON
+from base.database import Base
+from sqlalchemy.orm import relationship
 
 
-class Support:
+class Supporting(Base):
+    __tablename__ = 'supporting'
+    
+    supporting_id = Column(Integer, primary_key=True)
+    user_id = Column(Integer, ForeignKey('users.user_id'))
+    date_sending = Column(Date, nullable=False, default='CURRENT_TIMESTAMP')
+    content = Column(JSON, nullable=False, default='{}')
 
-    def __init__(self, user_id: int, date_sending: date, content: json, supporting_id: int = None):
-        self.user_id = user_id
-        self.date_sending = date_sending
-        self.content = content
-        if supporting_id:
-            self.supporting_id = supporting_id
+    user = relationship("User", back_populates="supportings")

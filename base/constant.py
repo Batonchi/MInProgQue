@@ -12,3 +12,5 @@ PASSWORD = os.environ.get('PASSWORD')
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 ALGORITHM = os.environ.get('ALGORITHM')
+
+DATABASE_URL = f'postgresql+asyncpg://{USER}:{PASSWORD}@{HOST}:{PORT}/{DBNAME}'

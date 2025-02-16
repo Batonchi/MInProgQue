@@ -1,5 +1,5 @@
-from database import get_connection
-from app.support.model import Support
+from base.database import get_connection
+from app.support.schemas import Support
 
 
 class SupportService:

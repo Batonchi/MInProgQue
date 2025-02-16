@@ -10,7 +10,7 @@ from starlette.exceptions import HTTPException
 from datetime import date
 from app.auth.service import create_token, hash_password
 from app.users.service import UserService
-from app.users.model import UserCreate
+from app.users.schemas import UserCreate
 
 
 router = APIRouter()
@@ -29,7 +29,7 @@ async def logout(request: Request):
 
 @router.post('/login')
 async def login(response: Response, email: str, password: str):
-    user = UserService.find_by_email_and_password(email, hash_password(password))
+    user = await UserService.get_one_or_none(email=email, password=hash_password(password))
     if not user:
         raise HTTPException(status_code=409, detail="Пользователь не найден! Неверный логин или пароль!")
     token = create_token(email, password)
@@ -40,11 +40,11 @@ async def login(response: Response, email: str, password: str):
 @router.post('/registration')
 async def registration(first_name: str, last_name: str, email: str, password: str, special_word: str):
     avatar_uuid = uuid.uuid4()
-    user = UserCreate(first_name, last_name, str(avatar_uuid), email, hash_password(password), special_word)
     path = os.path.join('app/view/static/images/avatars/', f'{avatar_uuid}.png')
     shutil.copy('app/view/static/images/profile/default.png', path)
     try:
-        UserService.save(user)
+        await UserService.insert(first_name=first_name, last_name=last_name, email=email, password=hash_password(password),
+                           special_word=special_word)
     except Exception as ex:
         print(ex)
         raise HTTPException(status_code=409)

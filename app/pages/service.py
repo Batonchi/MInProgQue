@@ -1,5 +1,5 @@
-from database import get_connection
-from app.pages.model import *
+from base.database import get_connection
+from app.pages.schemas import *
 
 
 class PageService:
@@ -82,14 +82,14 @@ class FeedBackService:
             conn.commit()
 
 
-class LiterarySourcesService:
+# class LiterarySourcesService:
 
-    @staticmethod
-    def save(literary_sources: LiterarySources):
-        with get_connection() as conn:
-            conn.cursor().execute('''INSERT INTO literary_sources (content) VALUES (%s)''',
-                                  (literary_sources.content, ))
-            conn.commit()
+#     @staticmethod
+#     def save(literary_sources: LiterarySources):
+#         with get_connection() as conn:
+#             conn.cursor().execute('''INSERT INTO literary_sources (content) VALUES (%s)''',
+#                                   (literary_sources.content, ))
+#             conn.commit()
 
 
 

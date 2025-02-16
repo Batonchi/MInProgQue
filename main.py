@@ -1,9 +1,10 @@
+import uvicorn
+
 from fastapi import FastAPI, Request, Response, HTTPException
 from pip._internal.network import auth
 from starlette.templating import Jinja2Templates
 from fastapi.responses import RedirectResponse
 from starlette.staticfiles import StaticFiles
-from database import create_database
 from app.auth.router import router as auth_router
 from app.pages.router import router as page_router
 from app.support.router import router as support_router
@@ -11,12 +12,10 @@ from app.users.router import router as user_router
 from app.admin.router import router as admin_router
 
 
-create_database()
-
-
 app = FastAPI()
 templates = Jinja2Templates(directory="app/view")
 
+# включение роутеров
 app.include_router(auth_router)
 app.include_router(page_router)
 app.include_router(support_router)
@@ -24,7 +23,6 @@ app.include_router(user_router)
 app.include_router(admin_router)
 
 app.mount('/static', StaticFiles(directory='app/view/static'))
-# включение роутеров
 
 
 @app.middleware("http")
@@ -69,4 +67,4 @@ async def home(request: Request):
 @app.get("/sources")
 async def home(request: Request):
     return templates.TemplateResponse("sources.html", {"request": request})
-
+    
