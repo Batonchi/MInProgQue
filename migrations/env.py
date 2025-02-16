@@ -4,6 +4,8 @@ from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 
 from alembic import context
+from base.database import Base
+from base.constant import DBNAME, USER, PASSWORD, HOST, PORT
 from base.database import metadata
 from app.users.model import User, Favorite
 from app.support.model import Supporting
@@ -12,6 +14,12 @@ from app.pages.model import Image, TextContent, Page, Feedback
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
+section = config.config_ini_section
+config.set_section_option(section, "HOST", HOST)
+config.set_section_option(section, "PORT", PORT)
+config.set_section_option(section, "USER", USER)
+config.set_section_option(section, "DBNAME", DBNAME)
+config.set_section_option(section, "PASSWORD", PASSWORD)
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
@@ -61,7 +69,6 @@ def run_migrations_online() -> None:
     and associate a connection with the context.
 
     """
-
     connectable = engine_from_config(
         config.get_section(config.config_ini_section, {}),
         prefix="sqlalchemy.",
@@ -75,6 +82,7 @@ def run_migrations_online() -> None:
 
         with context.begin_transaction():
             context.run_migrations()
+
 
 if context.is_offline_mode():
     run_migrations_offline()

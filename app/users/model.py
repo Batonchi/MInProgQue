@@ -2,7 +2,7 @@ import json
 
 
 from datetime import date
-from sqlalchemy import Column, Integer, String, Boolean, Date, Text, JSON, ForeignKey
+from sqlalchemy import Column, Integer, String, Boolean, Date, Text, JSON, ForeignKey, func
 from base.database import Base
 from sqlalchemy.orm import relationship
 
@@ -13,7 +13,7 @@ class User(Base):
     user_id = Column(Integer, primary_key=True, autoincrement=True)
     is_admin = Column(Boolean, nullable=True, default=False)
     is_active = Column(Boolean, nullable=True, default=False)
-    date_reg = Column(Date, nullable=False, default='CURRENT_TIMESTAMP')
+    date_reg = Column(Date, nullable=False, default=func.now())
     first_name = Column(String(255), nullable=False)
     last_name = Column(String(255), nullable=False)
     email = Column(Text, nullable=False, unique=True)
