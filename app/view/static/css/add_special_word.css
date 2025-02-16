@@ -1,17 +1,9 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: content-box;
-}
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    font-size: 20px;
+.custom-body {
     background-color: #4A6160;
     display: flex;
-    justify-content: center;
-    color: white;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
 }
 
 #exit {
@@ -19,8 +11,82 @@ body {
     background: url("/static/images/icons/exit-btn.png") no-repeat;
     width: 24px;
     height: 24px;
+    border: none;
 }
 
 #exit:hover {
     background: url("/static/images/icons/exit-btn_hover.svg") no-repeat;
+}
+
+.heading-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    font-weight: 900;
+    font-size: 64px;
+    font-family: inherit;
+    color: #4E807E;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 24px;
+    font-family: inherit;
+    color: white;
+    position: relative;
+    bottom: 50px;
+}
+
+p {
+    font-family: inherit;
+    font-size: 16px;
+    color: white;
+    width: 490px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.custom-form {
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    z-index: 10;
+}
+
+.custom-form button {
+    height: 75px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: none;
+    background-color: #8B6653;
+    position: relative;
+    bottom: 40px;
+    z-index: 11;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-image: url("/static/images/registration/arrow.svg");
+}
+
+.custom-form button:hover {
+    background-color: rgba(139, 102, 83, 0.8);
+}
+
+.custom-form input {
+    padding: 10px;
+    font-size: 18px;
+    color: #8B6653;
+    font-family: inherit;
+    font-weight: 700;
+    border-radius: 10px;
+    z-index: 12;
+    border: solid 5px rgba(139, 102, 83, 0.8);
+}
+
+input:focus {
+    outline: none;
 }

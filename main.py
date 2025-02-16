@@ -67,4 +67,10 @@ async def home(request: Request):
 @app.get("/sources")
 async def home(request: Request):
     return templates.TemplateResponse("sources.html", {"request": request})
+
+@app.get('/home')
+async def home(request: Request):
+    return templates.TemplateResponse("edit_article.html", {"request": request})
+
+
     

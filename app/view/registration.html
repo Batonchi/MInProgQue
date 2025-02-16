@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section>
+    <section id="reg_view_container">
         <button onclick="window.location.href='/login'" style="background: none; background-image: url('/static//images/registration/exit-btn.svg'); width: 30px; height: 30px; border: none; background-repeat: no-repeat;" class="exit-btn"></button>
         <div class="form_block">
             <div class="header_of_block">
@@ -21,33 +21,33 @@
             </div>
             <form action="" id="registration">
                 <div class="input_div">
-                    <label for="name">имя</label>
-                    <input type="text" name="name">
+                    <label>имя</label>
+                    <input type="text" name="first_name">
                 </div>
                 <div class="input_div">
-                    <label for="surname">фамилия</label>
-                    <input type="text" name="surname">
+                    <label>фамилия</label>
+                    <input type="text" name="last_name">
                 </div>
                 <div class="input_div">
-                    <label for="email">почта</label>
+                    <label>почта</label>
                     <input type="text" name="email">
                 </div>
                 <div class="input_div">
-                    <label for="birth_date">дата рождения</label>
+                    <label>дата рождения</label>
                     <input type="date" name="birth_date">
                 </div>
                 <div class="input_div">
-                    <label for="password">пароль</label>
+                    <label>пароль</label>
                     <input type="password" name="password" p>
                 </div>
                 <div class="input_div">
-                    <label for="password_again">повторите пароль</label>
-                    <input type="password" name="password_again">
+                    <label>повторите пароль</label>
+                    <input type="password" name="repeat_password">
                 </div>
                 <button type="button">выберите фото профиля</button>
                 <div class="check-box">
                     <input type="checkbox" name="agree_with">
-                    <label for="agree_with">ХОТИТЕ ПОЛУЧАТЬ СВЕДИЕ НОВОСТИ О ЖИЗНИ САЙТА?</label>
+                    <label>ХОТИТЕ ПОЛУЧАТЬ СВЕДИЕ НОВОСТИ О ЖИЗНИ САЙТА?</label>
                 </div>
             </form>
             <button form="registration" id="reg">
@@ -55,6 +55,8 @@
             </button>
         </div>
     </section>
-    <link rel="stylesheet" href="/static//css/registartion.css">
+    <link rel="stylesheet" href="/static/css/registartion.css" id="custom_style">
+    <script src="/static/js/registration.js"></script>
+    {% extends 'add_special_word.html' %}
 </body>
 </html>

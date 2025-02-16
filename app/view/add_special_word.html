@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang=>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Дунаев Глеб">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Введите специальное слово</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    {% block add_special_word %}
+    <div class="custom-body" id="view_add">
+        <section class="view_container">
+        <div class="heading-text">
+            <h2>MINPROGQUE</h2>
+            <h1>ВВЕДИТЕ СПЕЦИАЛЬНОЕ СЛОВО</h1>
+        </div>
+        <div class="custom-form">
+            <input type="text" placeholder="ваше слово:" id="special_word">
+            <button id="enter_word"></button>
+        </div>
+        </section>
+        <p>оно поможет, в разы быстрее, востановить ваш аккаунт при утрате</p>
+        <button id="exit"></button>
+        <link rel="stylesheet" href="/static/css/add_special_word.css">
+    </div>
+    {% endblock add_special_word %}
+</body>
+</html>
