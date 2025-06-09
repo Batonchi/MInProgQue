@@ -4,7 +4,7 @@ from base.database import async_session_maker
 from sqlalchemy import select, insert, delete, update
 
 
-class BaseService():
+class BaseService:
     model = None
 
     @classmethod

@@ -1,7 +1,6 @@
 import uvicorn
 
 from fastapi import FastAPI, Request, Response, HTTPException
-from pip._internal.network import auth
 from starlette.templating import Jinja2Templates
 from fastapi.responses import RedirectResponse
 from starlette.staticfiles import StaticFiles
@@ -10,7 +9,6 @@ from app.pages.router import router as page_router
 from app.support.router import router as support_router
 from app.users.router import router as user_router
 from app.admin.router import router as admin_router
-
 
 app = FastAPI()
 templates = Jinja2Templates(directory="app/view")
@@ -37,7 +35,6 @@ async def error_handler(request: Request, call_next):
     return response
 
 
-
 # @app.exception_handler(HTTPException)
 # async def exception_handel(request: Request, exc):
 #     code = exc.__dict__['status_code']
@@ -56,7 +53,9 @@ async def main_page(request: Request):
 
 @app.get("/contact")
 async def home(request: Request):
-    return templates.TemplateResponse("contact_drop.html", {"request": request, "email_address": 'gkok.gkok@yandex.ru', "number_of_phone": '+7 (927) 378 25-74', "tg_name": 'Batinchi'})
+    return templates.TemplateResponse("contact_drop.html", {"request": request, "email_address": 'gkok.gkok@yandex.ru',
+                                                            "number_of_phone": '+7 (927) 378 25-74',
+                                                            "tg_name": 'Batinchi'})
 
 
 @app.get("/rules")
@@ -68,9 +67,7 @@ async def home(request: Request):
 async def home(request: Request):
     return templates.TemplateResponse("sources.html", {"request": request})
 
+
 @app.get('/home')
 async def home(request: Request):
-    return templates.TemplateResponse("edit_article.html", {"request": request})
-
-
-    
+    return templates.TemplateResponse("maxclickpick_conf.html", {"request": request})

@@ -31,6 +31,7 @@ async def get_user_by_token(request: Request):
         raise HTTPException(status_code=409, detail="Пользователь не найден! Неверный логин или пароль!")
     return user
 
+
 async def get_admin_by_token(request: Request):
     user = await get_user_by_token(request)
     if not user.is_admin:

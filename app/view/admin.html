@@ -4,8 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Администратор</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/admin.css">
 </head>
 <body>
-    
+    <div class="background-color_block">
+        <header class="div-flex_row">
+            <div class="div-flex_row">
+                <h1 onclick="window.location.href='/'" style="cursor: pointer" class="first_h">MiNProgQue</h1>
+                <h1>Admin Page Mode</h1>
+            </div>
+            <button id="exit_from_mode">
+                выйти из режима
+            </button>
+        </header>
+        <section class="info_and_func-btn div-flex_row">
+            <div>
+                <h2>ЛИЧНАЯ ИНФОРМАЦИЯ</h2>
+                <div class="div-flex_row personal_inf">
+                    <div class="image" id="avatar"></div>
+                    <div class="div-flex_column">
+                        <div>
+                            <p class="first_p">ID</p>
+                            <p class="first_p" id="admin_id">{{admin_id}}</p>
+                        </div>
+                        <div>
+                            <p class="first_p">ФИ</p>
+                            <p class="first_p" id="first_and_last_name">{{first_and_last_name}}</p>
+                        </div>
+                        <div>
+                            <p class="first_p">токен</p>
+                            <p class="first_p" id="token">{{token}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-btn_container">
+                <button class="btn-1">обратная связь</button>
+                <button class="btn-2">рассылка</button>
+                <button class="btn-3">статьи</button>
+                <button class="btn-4">пользователи</button>
+                <button class="btn-5">поддержка</button>
+                <button class="btn-6">блок-лист</button>
+                <div class="div-flex_column">
+                    <button class="btn-7">инструкция по применению</button>
+                    <button class="btn-8">выдать временный токен администратора</button>
+                </div>
+            </div>
+        </section>
+        <section class="view_window">
+            <h2 class="sec_h2">ОКНО ПРОСМОТРА</h2>
+            <div id="mode_container"></div>
+        </section>
+        <footer class="div-flex_row">
+            <p>потча: {{email}}</p>
+            <h1>MINPROGQUE</h1>
+            <a href="">документация</a>
+        </footer>
+    </div>
 </body>
 </html>
